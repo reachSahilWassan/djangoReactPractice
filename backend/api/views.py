@@ -11,6 +11,5 @@ from rest_framework.decorators import api_view
 @api_view(['GET'])
 def home(request):
     # sets csrf_cookie in the response
-    
     csrf_token = get_token(request)
     return Response({"message": "This message gets data from backend to frontend"})
